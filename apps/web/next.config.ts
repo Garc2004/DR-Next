@@ -11,7 +11,6 @@ const nextConfig: NextConfig = {
     // SWC compiler (default since Next 12; declared explicitly)
     removeConsole:
       process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
-    emotion: false,
   },
   transpilePackages: ['@dr/ui', '@dr/db', '@dr/charts', 'recharts'],
   output: 'standalone',
