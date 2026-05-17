@@ -5,7 +5,7 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   cacheComponents: true,
   experimental: {
-    optimizePackageImports: ['lucide-react', 'recharts', '@dr/ui'],
+    optimizePackageImports: ['lucide-react', '@dr/ui'],
   },
   compiler: {
     // SWC compiler (default since Next 12; declared explicitly)
@@ -13,7 +13,7 @@ const nextConfig: NextConfig = {
       process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
     emotion: false,
   },
-  transpilePackages: ['@dr/ui', '@dr/db', '@dr/charts'],
+  transpilePackages: ['@dr/ui', '@dr/db', '@dr/charts', 'recharts'],
   output: 'standalone',
   typescript: {
     ignoreBuildErrors: false,

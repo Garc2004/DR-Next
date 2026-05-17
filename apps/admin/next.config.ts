@@ -5,13 +5,13 @@ const nextConfig: NextConfig = {
   poweredByHeader: false,
   cacheComponents: true,
   experimental: {
-    optimizePackageImports: ['lucide-react', 'recharts', '@dr/ui'],
+    optimizePackageImports: ['lucide-react', '@dr/ui'],
   },
   compiler: {
     removeConsole:
       process.env.NODE_ENV === 'production' ? { exclude: ['error', 'warn'] } : false,
   },
-  transpilePackages: ['@dr/ui', '@dr/db', '@dr/charts'],
+  transpilePackages: ['@dr/ui', '@dr/db', '@dr/charts', 'recharts'],
   output: 'standalone',
 };
 
