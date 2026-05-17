@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cn } from '@dr/ui';
 
-interface ChartCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface ChartCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   eyebrow?: string;
   title: React.ReactNode;
   subtitle?: React.ReactNode;

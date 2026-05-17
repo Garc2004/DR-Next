@@ -23,7 +23,7 @@ export function getBrowserClient(): SupabaseClient<Database> {
         params: { eventsPerSecond: 10 },
       },
     },
-  );
+  ) as any as SupabaseClient<Database>;
 
   return cached;
 }

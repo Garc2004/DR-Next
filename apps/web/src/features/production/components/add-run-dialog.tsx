@@ -25,15 +25,13 @@ import {
 import { productionDialogAtom } from '@/lib/atoms/dialogs';
 import { useCreateRun, useResources } from '../hooks';
 
-const Schema = v.pipe(
-  v.object({
-    order_number: v.pipe(v.string(), v.regex(/^\d{6,10}$/, 'Ordem deve ter 6 a 10 dígitos')),
-    batch_number: v.pipe(v.string(), v.regex(/^\d{6,12}$/, 'Lote deve ter 6 a 12 dígitos')),
-    resource_id: v.pipe(v.string(), v.uuid('Selecione um reator')),
-    product_name: v.optional(v.string()),
-    notes: v.optional(v.string()),
-  }),
-);
+const Schema = v.object({
+  order_number: v.pipe(v.string(), v.regex(/^\d{6,10}$/, 'Ordem deve ter 6 a 10 dígitos')),
+  batch_number: v.pipe(v.string(), v.regex(/^\d{6,12}$/, 'Lote deve ter 6 a 12 dígitos')),
+  resource_id: v.pipe(v.string(), v.uuid('Selecione um reator')),
+  product_name: v.optional(v.string()),
+  notes: v.optional(v.string()),
+});
 type Input = v.InferOutput<typeof Schema>;
 
 export function AddRunDialog() {

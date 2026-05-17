@@ -1,4 +1,4 @@
-import type { RealtimeChannel, RealtimePostgresChangesPayload, SupabaseClient } from '@supabase/supabase-js';
+import type { RealtimeChannel, RealtimePostgresChangesPayload, SupabaseClient, RealtimeChannelSendResponse } from '@supabase/supabase-js';
 import type { Database } from '../types/database';
 
 export type WatchedTable =
@@ -15,7 +15,7 @@ type Listener = (payload: unknown) => void;
 
 export interface RealtimeContextValue {
   on: <T = unknown>(key: RealtimeKey, handler: (payload: T) => void) => () => void;
-  send: (event: string, payload: Record<string, unknown>) => Promise<'ok' | 'timed out' | 'error'>;
+  send: (event: string, payload: Record<string, unknown>) => Promise<RealtimeChannelSendResponse>;
   dispose: () => void;
 }
 

@@ -23,7 +23,7 @@ export async function getServerClient(): Promise<SupabaseClient<Database>> {
         getAll() {
           return cookieStore.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: any[]) {
           try {
             for (const { name, value, options } of cookiesToSet) {
               cookieStore.set(name, value, { ...sharedOptions, ...options });
@@ -35,7 +35,7 @@ export async function getServerClient(): Promise<SupabaseClient<Database>> {
         },
       },
     },
-  );
+  ) as any as SupabaseClient<Database>;
 }
 
 /**
@@ -56,5 +56,5 @@ export function getServiceRoleClient(): SupabaseClient<Database> {
     {
       auth: { autoRefreshToken: false, persistSession: false },
     },
-  );
+  ) as any as SupabaseClient<Database>;
 }

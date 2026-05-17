@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cn } from '../lib/cn';
 
-interface SurfaceCardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface SurfaceCardProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   eyebrow?: string;
   title?: React.ReactNode;
   actions?: React.ReactNode;

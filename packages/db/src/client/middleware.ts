@@ -22,7 +22,7 @@ export function createMiddlewareClient(request: NextRequest) {
         getAll() {
           return request.cookies.getAll();
         },
-        setAll(cookiesToSet) {
+        setAll(cookiesToSet: any[]) {
           for (const { name, value } of cookiesToSet) {
             request.cookies.set(name, value);
           }

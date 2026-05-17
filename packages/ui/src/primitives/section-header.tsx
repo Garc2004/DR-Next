@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { cn } from '../lib/cn';
 
-interface SectionHeaderProps extends React.HTMLAttributes<HTMLElement> {
+interface SectionHeaderProps extends Omit<React.HTMLAttributes<HTMLElement>, 'title'> {
   eyebrow?: string;
   title: React.ReactNode;
   subtitle?: React.ReactNode;
