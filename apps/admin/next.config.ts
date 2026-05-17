@@ -3,10 +3,8 @@ import type { NextConfig } from 'next';
 const nextConfig: NextConfig = {
   reactStrictMode: true,
   poweredByHeader: false,
+  cacheComponents: true,
   experimental: {
-    ppr: 'incremental',
-    dynamicIO: true,
-    reactCompiler: false,
     optimizePackageImports: ['lucide-react', 'recharts', '@dr/ui'],
   },
   compiler: {
