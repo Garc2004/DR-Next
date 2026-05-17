@@ -1,0 +1,33 @@
+{
+  "name": "@dr/config",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    "./tsconfig/base.json": "./tsconfig/base.json",
+    "./tsconfig/next.json": "./tsconfig/next.json",
+    "./tsconfig/react-lib.json": "./tsconfig/react-lib.json",
+    "./tsconfig/node-lib.json": "./tsconfig/node-lib.json",
+    "./eslint/base": "./eslint/base.mjs",
+    "./eslint/next": "./eslint/next.mjs",
+    "./eslint/react-lib": "./eslint/react-lib.mjs",
+    "./prettier": "./prettier/index.mjs",
+    "./vitest/setup": "./vitest/setup.ts"
+  },
+  "files": ["tsconfig", "eslint", "prettier", "vitest"],
+  "dependencies": {
+    "@eslint/js": "^9.17.0",
+    "@next/eslint-plugin-next": "^15.1.3",
+    "@typescript-eslint/eslint-plugin": "^8.18.2",
+    "@typescript-eslint/parser": "^8.18.2",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.37.2",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "typescript-eslint": "^8.18.2"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.2"
+  }
+}

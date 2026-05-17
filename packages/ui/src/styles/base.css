@@ -1,0 +1,60 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+@theme {
+  /* Neutral paper / ink */
+  --color-canvas: oklch(0.985 0.002 90);
+  --color-surface: #ffffff;
+  --color-surface-alt: #f5f5f4;
+  --color-ink: #0a0a0b;
+  --color-ink-mid: #52525b;
+  --color-ink-muted: #a1a1aa;
+  --color-border: #e7e5e4;
+  --color-border-strong: #d6d3d1;
+
+  /* Accent — identidad DR (naranja industrial) */
+  --color-accent: #ff4d00;
+  --color-accent-dark: #cc3d00;
+  --color-accent-soft: #fff1eb;
+
+  /* Status semantic */
+  --color-status-active: #16a34a;
+  --color-status-pending: #eab308;
+  --color-status-completed: #52525b;
+  --color-status-error: #dc2626;
+  --color-status-info: #0ea5e9;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+
+  /* Shadows (light theme) */
+  --shadow-base: 0 1px 2px rgb(10 10 11 / 0.04), 0 1px 1px rgb(10 10 11 / 0.03);
+  --shadow-raised: 0 4px 12px rgb(10 10 11 / 0.06), 0 2px 4px rgb(10 10 11 / 0.04);
+  --shadow-overlay: 0 24px 60px rgb(10 10 11 / 0.18), 0 8px 24px rgb(10 10 11 / 0.10);
+
+  /* Typography */
+  --font-sans: 'Geist', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+  --tracking-tighter: -0.04em;
+  --tracking-tight: -0.02em;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  background: var(--color-canvas);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: 'cv11', 'ss01';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  border-color: var(--color-border);
+}
